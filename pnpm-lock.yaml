@@ -18,6 +18,7 @@ importers:
       postcss-each-variables: ^0.3.0
       postcss-for: ^2.1.1
       postcss-nested: ^6.0.1
+      toy-element: workspace:*
       typescript: ^5.2.2
       vite: ^5.1.4
       vitest: ^1.4.0
@@ -28,6 +29,7 @@ importers:
       '@toy-element/theme': link:packages/theme
       '@toy-element/utils': link:packages/utils
       lodash-es: registry.npmmirror.com/lodash-es/4.17.21
+      toy-element: link:packages/core
       vue: registry.npmmirror.com/vue/3.5.4_typescript@5.6.2
     devDependencies:
       '@types/lodash-es': registry.npmmirror.com/@types/lodash-es/4.17.12
