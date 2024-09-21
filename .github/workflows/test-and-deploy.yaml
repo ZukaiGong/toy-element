@@ -40,7 +40,8 @@ jobs:
         uses: actions/setup-node@v3
 
       - name: Install pnpm
-        run: npm install -g pnpm
+        # run: npm install -g pnpm
+        run: npm install -g pnpm@7
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
