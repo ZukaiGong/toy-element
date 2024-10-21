@@ -7,5 +7,5 @@ import "@toy-element/theme/index.css";
 library.add(fas);
 const intaller = makeInstaller(components);
 
-export * from "@toy-element/components";
+export * from "../components";
 export default intaller;
