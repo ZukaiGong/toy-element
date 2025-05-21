@@ -13,6 +13,7 @@ importers:
       '@toy-element/utils': workspace:*
       '@types/lodash-es': ^4.17.12
       '@types/node': ^20.11.20
+      '@types/shelljs': ^0.8.16
       '@vitejs/plugin-vue': ^5.0.4
       '@vitejs/plugin-vue-jsx': ^3.1.0
       '@vue/tsconfig': ^0.5.1
@@ -28,6 +29,7 @@ importers:
       postcss-nested: ^6.0.1
       release-it: ^17.10.0
       rimraf: ^6.0.1
+      shelljs: ^0.10.0
       toy-element: workspace:*
       typescript: ^5.2.2
       vite: ^5.1.4
@@ -48,6 +50,7 @@ importers:
       '@popperjs/core': registry.npmmirror.com/@popperjs/core/2.11.8
       '@types/lodash-es': registry.npmmirror.com/@types/lodash-es/4.17.12
       '@types/node': registry.npmmirror.com/@types/node/20.16.5
+      '@types/shelljs': registry.npmmirror.com/@types/shelljs/0.8.16
       '@vitejs/plugin-vue': registry.npmmirror.com/@vitejs/plugin-vue/5.1.3_vite@5.4.4+vue@3.5.4
       '@vitejs/plugin-vue-jsx': registry.npmmirror.com/@vitejs/plugin-vue-jsx/3.1.0_vite@5.4.4+vue@3.5.4
       '@vue/tsconfig': registry.npmmirror.com/@vue/tsconfig/0.5.1
@@ -62,6 +65,7 @@ importers:
       postcss-nested: registry.npmmirror.com/postcss-nested/6.2.0_postcss@8.4.47
       release-it: registry.npmmirror.com/release-it/17.10.0_typescript@5.6.2
       rimraf: registry.npmmirror.com/rimraf/6.0.1
+      shelljs: registry.npmmirror.com/shelljs/0.10.0
       typescript: registry.npmmirror.com/typescript/5.6.2
       vite: registry.npmmirror.com/vite/5.4.4_@types+node@20.16.5
       vitest: registry.npmmirror.com/vitest/1.6.0_@types+node@20.16.5
@@ -84,11 +88,23 @@ importers:
 
   packages/core:
     specifiers:
+      '@fortawesome/fontawesome-svg-core': ^6.5.2
+      '@fortawesome/free-solid-svg-icons': ^6.5.2
+      '@fortawesome/vue-fontawesome': ^3.0.8
+      '@popperjs/core': ^2.11.8
       '@toy-element/components': workspace:*
+      async-validator: ^4.2.5
+      vite-plugin-compression2: ^1.3.3
       vite-plugin-dts: ^3.9.1
     dependencies:
-      '@toy-element/components': link:../components
+      '@fortawesome/fontawesome-svg-core': registry.npmmirror.com/@fortawesome/fontawesome-svg-core/6.6.0
+      '@fortawesome/free-solid-svg-icons': registry.npmmirror.com/@fortawesome/free-solid-svg-icons/6.6.0
+      '@fortawesome/vue-fontawesome': registry.npmmirror.com/@fortawesome/vue-fontawesome/3.0.8_yfkb55vqopzyzrgngha7flpeca
+      '@popperjs/core': registry.npmmirror.com/@popperjs/core/2.11.8
+      async-validator: registry.npmmirror.com/async-validator/4.2.5
     devDependencies:
+      '@toy-element/components': link:../components
+      vite-plugin-compression2: registry.npmmirror.com/vite-plugin-compression2/1.3.3
       vite-plugin-dts: registry.npmmirror.com/vite-plugin-dts/3.9.1
 
   packages/docs:
@@ -1024,6 +1040,18 @@ packages:
     engines: {node: '>=6'}
     dependencies:
       '@fortawesome/fontawesome-common-types': registry.npmmirror.com/@fortawesome/fontawesome-common-types/6.6.0
+    dev: false
+
+  registry.npmmirror.com/@fortawesome/vue-fontawesome/3.0.8_yfkb55vqopzyzrgngha7flpeca:
+    resolution: {integrity: sha512-yyHHAj4G8pQIDfaIsMvQpwKMboIZtcHTUvPqXjOHyldh1O1vZfH4W03VDPv5RvI9P6DLTzJQlmVgj9wCf7c2Fw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@fortawesome/vue-fontawesome/-/vue-fontawesome-3.0.8.tgz}
+    id: registry.npmmirror.com/@fortawesome/vue-fontawesome/3.0.8
+    name: '@fortawesome/vue-fontawesome'
+    version: 3.0.8
+    peerDependencies:
+      '@fortawesome/fontawesome-svg-core': ~1 || ~6
+      vue: '>= 3.0.0 < 4'
+    dependencies:
+      '@fortawesome/fontawesome-svg-core': registry.npmmirror.com/@fortawesome/fontawesome-svg-core/6.6.0
     dev: false
 
   registry.npmmirror.com/@fortawesome/vue-fontawesome/3.0.8_zhckut3k5qbtaihowuhqm2oblu:
@@ -2330,6 +2358,15 @@ packages:
     version: 3.2.1
     dev: true
 
+  registry.npmmirror.com/@types/glob/7.2.0:
+    resolution: {integrity: sha512-ZUxbzKl0IfJILTS6t7ip5fQQM/J3TJYubDm3nMbgubNNYS62eXeUpoLUC8/7fJNiFYHTrGPQn7hspDUzIHX3UA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/glob/-/glob-7.2.0.tgz}
+    name: '@types/glob'
+    version: 7.2.0
+    dependencies:
+      '@types/minimatch': registry.npmmirror.com/@types/minimatch/5.1.2
+      '@types/node': registry.npmmirror.com/@types/node/20.16.5
+    dev: true
+
   registry.npmmirror.com/@types/hast/3.0.4:
     resolution: {integrity: sha512-WPs+bbQw5aCj+x6laNGWLH3wviHtoCv/P3+otBhbOhJgG8qtpdAMlTCxLtsTWA7LH1Oh/bFCHsBn0TPS5m30EQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/hast/-/hast-3.0.4.tgz}
     name: '@types/hast'
@@ -2399,6 +2436,12 @@ packages:
     version: 1.3.5
     dev: true
 
+  registry.npmmirror.com/@types/minimatch/5.1.2:
+    resolution: {integrity: sha512-K0VQKziLUWkVKiRVrx4a40iPaxTUefQmjtkQofBkYRcoaaL/8rhwDWww9qWbrgicNOgnpIsMxyNIUM4+n6dUIA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/minimatch/-/minimatch-5.1.2.tgz}
+    name: '@types/minimatch'
+    version: 5.1.2
+    dev: true
+
   registry.npmmirror.com/@types/minimist/1.2.5:
     resolution: {integrity: sha512-hov8bUuiLiyFPGyFPE1lwWhmzYbirOXQNNo40+y3zow8aFVTeyn3VWL0VFFfdNddA8S4Vf0Tc062rzyNr7Paag==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/minimist/-/minimist-1.2.5.tgz}
     name: '@types/minimist'
@@ -2463,6 +2506,15 @@ packages:
       '@types/http-errors': registry.npmmirror.com/@types/http-errors/2.0.4
       '@types/node': registry.npmmirror.com/@types/node/20.16.5
       '@types/send': registry.npmmirror.com/@types/send/0.17.4
+    dev: true
+
+  registry.npmmirror.com/@types/shelljs/0.8.16:
+    resolution: {integrity: sha512-40SUXiH0tZfAg/oKkkGF1kdHPAmE4slv2xAmbfa8VtE6ztHYwdpW2phlzHTVdJh5JOGqA3Cx1Hzp7kxFalKHYA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/shelljs/-/shelljs-0.8.16.tgz}
+    name: '@types/shelljs'
+    version: 0.8.16
+    dependencies:
+      '@types/glob': registry.npmmirror.com/@types/glob/7.2.0
+      '@types/node': registry.npmmirror.com/@types/node/20.16.5
     dev: true
 
   registry.npmmirror.com/@types/unist/3.0.3:
@@ -8462,6 +8514,16 @@ packages:
     version: 1.8.1
     dev: true
 
+  registry.npmmirror.com/shelljs/0.10.0:
+    resolution: {integrity: sha512-Jex+xw5Mg2qMZL3qnzXIfaxEtBaC4n7xifqaqtrZDdlheR70OGkydrPJWT0V1cA1k3nanC86x9FwAmQl6w3Klw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/shelljs/-/shelljs-0.10.0.tgz}
+    name: shelljs
+    version: 0.10.0
+    engines: {node: '>=18'}
+    dependencies:
+      execa: registry.npmmirror.com/execa/5.1.1
+      fast-glob: registry.npmmirror.com/fast-glob/3.3.2
+    dev: true
+
   registry.npmmirror.com/shelljs/0.8.5:
     resolution: {integrity: sha512-TiwcRcrkhHvbrZbnRcFYMLl30Dfov3HKqzp5tO5b4pt6G/SezKcYhmDg15zXVBswHmctSAQKznqNW2LO5tTDow==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/shelljs/-/shelljs-0.8.5.tgz}
     name: shelljs
@@ -8938,6 +9000,12 @@ packages:
     resolution: {integrity: sha512-Cat63mxsVJlzYvN51JmVXIgNoUokrIaT2zLclCXjRd8boZ0004U4KCs/sToJ75C6sdlByWxpYnb5Boif1VSFew==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/tabbable/-/tabbable-6.2.0.tgz}
     name: tabbable
     version: 6.2.0
+    dev: true
+
+  registry.npmmirror.com/tar-mini/0.2.0:
+    resolution: {integrity: sha512-+qfUHz700DWnRutdUsxRRVZ38G1Qr27OetwaMYTdg8hcPxf46U0S1Zf76dQMWRBmusOt2ZCK5kbIaiLkoGO7WQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/tar-mini/-/tar-mini-0.2.0.tgz}
+    name: tar-mini
+    version: 0.2.0
     dev: true
 
   registry.npmmirror.com/telejson/7.2.0:
@@ -9481,6 +9549,19 @@ packages:
       - sugarss
       - supports-color
       - terser
+    dev: true
+
+  registry.npmmirror.com/vite-plugin-compression2/1.3.3:
+    resolution: {integrity: sha512-Mb+xi/C5b68awtF4fNwRBPtoZiyUHU3I0SaBOAGlerlR31kusq1si6qG31lsjJH8T7QNg/p3IJY2HY9O9SvsfQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vite-plugin-compression2/-/vite-plugin-compression2-1.3.3.tgz}
+    name: vite-plugin-compression2
+    version: 1.3.3
+    peerDependencies:
+      vite: ^2.0.0||^3.0.0||^4.0.0||^5.0.0 ||^6.0.0
+    dependencies:
+      '@rollup/pluginutils': registry.npmmirror.com/@rollup/pluginutils/5.1.2
+      tar-mini: registry.npmmirror.com/tar-mini/0.2.0
+    transitivePeerDependencies:
+      - rollup
     dev: true
 
   registry.npmmirror.com/vite-plugin-dts/3.9.1:
