@@ -26,10 +26,14 @@ const disabled = computed(
 );
 const iconStyle = computed(() => ({
   marginRight: slots.default ? "6px" : "0px",
-}))
+}));
 
 const handleBtnClick = (e: MouseEvent) => emits("click", e);
-const handleBtnClickThrottle = throttle(handleBtnClick, props.throttleDuration);
+const handleBtnClickThrottle = throttle(
+  handleBtnClick,
+  props.throttleDuration,
+  { trailing: false }
+);
 
 defineExpose<ButtonInstance>({
   ref: _ref,
@@ -74,11 +78,11 @@ defineExpose<ButtonInstance>({
       :style="iconStyle"
       v-if="icon && !loading"
     />
-    
+
     <slot></slot>
   </component>
 </template>
 
 <style scoped>
-@import './style.css';
+@import "./style.css";
 </style>

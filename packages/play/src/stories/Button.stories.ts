@@ -1,7 +1,7 @@
-import type {  Meta, StoryObj, ArgTypes } from '@storybook/vue3';
-import { fn, within, userEvent, expect } from '@storybook/test';
+import type { Meta, StoryObj, ArgTypes } from "@storybook/vue3";
+import { fn, within, userEvent, expect } from "@storybook/test";
 
-import { ErButton, ErButtonGroup } from 'toy-element'; 
+import { ErButton, ErButtonGroup } from "toy-element";
 
 type Story = StoryObj<typeof ErButton> & { argTypes: ArgTypes };
 
@@ -85,7 +85,7 @@ export const Default: Story & { args: { content: string } } = {
 
     expect(args.onClick).toHaveBeenCalled();
   },
-}
+};
 
 export const Group: Story & { args: { content1: string; content2: string } } = {
   argTypes: {
