@@ -1,4 +1,6 @@
 export default function () {
+  // 需要在env.d.ts文件中声明全局变量，并且tsconfig.json中include需要添加env.d.ts
+  // 否则编译时因为无法识别PROD、DEV会报错
   if (PROD) {
     const logo = `
 ____________________________________________________________________________________
