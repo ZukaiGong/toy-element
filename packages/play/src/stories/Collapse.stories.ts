@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
 import { ErCollapse, ErCollapseItem } from "toy-element";
-// import "toy-element/dist/theme/Collapse.css";
+import "toy-element/dist/theme/Collapse.css";
 
 type Story = StoryObj<typeof ErCollapse>;
 
@@ -38,7 +38,7 @@ export const Default: Story = {
   }),
   args: {
     accordion: true,
-    modelValue: ["a"],
+    modelValue: ["a", "b"],
   },
 };
 

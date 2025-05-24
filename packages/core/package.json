@@ -25,10 +25,13 @@
   ],
   "scripts": {
     "build": "run-s build-only",
+    "build:watch": "run-p build-es:watch build-umd:watch",
     "build-old": "run-s clean build-only move-style",
     "build-only": "run-p build-es build-umd",
     "build-umd": "vite build --config vite.umd.config.ts",
     "build-es": "vite build --config vite.es.config.ts",
+    "build-umd:watch": "vite build --watch --config build/vite.umd.config.ts",
+    "build-es:watch": "vite build --watch --config build/vite.es.config.ts",
     "move-style": "move-file dist/es/index.css dist/index.css",
     "clean": "rimraf dist",
     "release": "release-it"
@@ -44,7 +47,9 @@
     "async-validator": "^4.2.5"
   },
   "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
     "@toy-element/components": "workspace:*",
+    "terser": "^5.39.2",
     "vite-plugin-compression2": "^1.3.3",
     "vite-plugin-dts": "^3.9.1"
   },
