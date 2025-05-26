@@ -10,5 +10,5 @@ printLogo();
 library.add(fas);
 const intaller = makeInstaller(components);
 
-export * from "../components";
+export * from "@toy-element/components";
 export default intaller;
